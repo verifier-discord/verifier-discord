@@ -11,53 +11,79 @@
             margin: 0;
             padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-image: url("blueback.jpg"); 
+            background-image: url("blueback.jpeg");
             background-size: cover;
             color: #333;
         }
-
+        
         .container {
             max-width: 800px;
             margin: 20px auto;
             padding: 20px;
-            background: rgba(255, 255, 255, 0.8); 
+            background: rgba(0, 162, 255, 0.8);
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             opacity: 0.8;
         }
-
-        h1,
+        
+        .containerContainer {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(0, 110, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            opacity: 0.8;
+        }
+        
+        .containerDarker {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(0, 60, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            opacity: 0.8;
+        }
+        
+        h1 {
+            color: #ffffff;
+            text-align: center;
+            font-size: 40px;
+        }
+        
         h2,
         h3 {
-            color: #333;
+            color: #ffffff;
             text-align: center;
+            font-size: 30px;
         }
-
+        
         p {
-            font-size: 18px;
+            color: #ffffff;
+            font-size: 20px;
             line-height: 1.6;
         }
-
+        
         a {
-            color: #007bff;
+            color: #0004ff;
             text-decoration: none;
             transition: color 0.3s;
         }
-
+        
         a:hover {
-            color: #0056b3;
+            color: #c300ff;
         }
-
+        
         .fadeInUp {
             animation: fadeInUp 1s ease;
         }
-
+        
         @keyframes fadeInUp {
             0% {
                 opacity: 0;
                 transform: translateY(20px);
             }
-
             100% {
                 opacity: 1;
                 transform: translateY(0);
@@ -68,17 +94,20 @@
 
 <body>
     <div class="container animate__animated animate__fadeInUp">
-        <h1>Welcome to Rewards and Verifier!</h1>
-        <div class="backgroundCont">
-            <h2>INFORMATION</h2>
-            <div class="container">
-                <h3>What is this page for?</h3>
-                <p>Here, you can verify from our bot that may potentially be in a server you are in. Alternatively, You can add our bot to protect your server from nukes, raids, alt accounts, VPNs, etc. Or even use it to host giveaways in your server!</p>
-            </div>
-            <br>
-            <div class="container">
-                <h3>How do I get the bot?</h3>
-                <p>You can get the bot <a href="enter_bot_link">here</a></p>
+        <h1><u><b>Welcome to Rewards and Verifier!</b></u></h1>
+        <div class="containerContainer">
+            <div class="backgroundCont">
+                <h2><u><b>INFORMATION</b></u>
+                </h2>
+                <div class="containerDarker">
+                    <h3><u>What is this page for?</u></h3>
+                    <p>Here, you can verify from our bot that may potentially be in a server you are in. Alternatively, You can add our bot to protect your server from nukes, raids, alt accounts, VPNs, etc. Or even use it to host giveaways in your server!</p>
+                </div>
+                <br>
+                <div class="containerDarker">
+                    <h3><u>How do I get the bot?</u></h3>
+                    <p>You can get the bot <a href="enter_bot_link"><u>here</u></a></p>
+                </div>
             </div>
         </div>
     </div>
