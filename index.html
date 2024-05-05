@@ -7,7 +7,8 @@
     <title>Home</title>
     <style>
         body {
-            background-color: rgb(58, 58, 58);
+            background-image: url("background.jpeg");
+            background-size: cover;
             text-align: center;
         }
         
@@ -16,11 +17,55 @@
             font-family: Arial, Helvetica, sans-serif;
             font-size: 50px;
         }
+        
+        p {
+            color: rgb(255, 255, 255);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+        }
+        
+        .backgroundCont {
+            background-color: rgb(0, 60, 255);
+            margin: 75px;
+            padding: 5px;
+            border: black solid 2px;
+            border-radius: 20px;
+        }
+        
+        .container {
+            background-color: rgb(0, 17, 255);
+            padding: 10px;
+            margin: 10px;
+            border-radius: 20px;
+            border: black solid 2px;
+        }
+        
+        a {
+            color: rgb(152, 152, 255);
+            transition: color 0.3s;
+        }
+        
+        a:hover {
+            color: rgb(49, 49, 255);
+            transition: color 0.3s;
+        }
     </style>
 </head>
 
 <body>
     <h1><u>Welcome to Rewards and Verifier!</u></h1>
+    <div class="backgroundCont">
+        <h1><u>INFORMATION</u></h1>
+        <div class="container">
+            <h1><u>What is this page for?</u></h1>
+            <p>Here, you can verify from our bot that may potentially be in a server you are in. Alternitavely, You can add our bot to protect your server from nukes, raids, alt accounts, vpn's etc. Or even use it to host giveaways in your server!</p>
+        </div>
+        <br>
+        <div class="container">
+            <h1><u>How do I get the bot?</u></h1>
+            <p>You can get the bot <a href="enter_bot_link">here</a></p>
+        </div>
+    </div>
 </body>
 
 </html>
