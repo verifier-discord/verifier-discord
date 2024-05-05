@@ -86,28 +86,30 @@
             <p>Reason: VPN</p>
         </div>
     </div>
-    <div id="vpn-status-success2" class="vpn-status" hidden>
-        <p>No VPN Detected - Successful</p>
-    </div>
     <script>
         const checkVPNButton = document.getElementById("checkVPNButton");
         const vpnStatusFailed = document.getElementById("vpn-status-failed");
         const vpnStatusSuccess = document.getElementById("vpn-status-success");
-        const vpnStatusSuccess2 = document.getElementById("vpn-status-success2");
 
         checkVPNButton.addEventListener("click", () => {
-            fetch("https://ipapi.co/json/")
+            fetch("https://api.ipify.org?format=json")
                 .then((response) => response.json())
                 .then((data) => {
-                    if (data.vpn) {
-                        vpnStatusFailed.hidden = false;
-                        vpnStatusSuccess.hidden = true;
-                        vpnStatusSuccess2.hidden = true;
-                    } else {
-                        vpnStatusFailed.hidden = true;
-                        vpnStatusSuccess.hidden = false;
-                        vpnStatusSuccess2.hidden = false;
-                    }
+                    const userIP = data.ip;
+                    fetch(`https://api.ip2proxy.com/?key=F1344DB961F5E972BDA424EDA0AF8C04&ip=${userIP}&format=json`)
+                        .then((response) => response.json())
+                        .then((data) => {
+                            if (data.proxyType === "VPN") {
+                                vpnStatusFailed.hidden = false;
+                                vpnStatusSuccess.hidden = true;
+                            } else {
+                                vpnStatusFailed.hidden = true;
+                                vpnStatusSuccess.hidden = false;
+                            }
+                        })
+                        .catch((error) => {
+                            console.error("Error:", error);
+                        });
                 })
                 .catch((error) => {
                     console.error("Error:", error);
