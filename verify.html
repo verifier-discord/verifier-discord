@@ -78,7 +78,7 @@
         <br>
         <br>
         <div class="successful" id="vpn-status-success" hidden>
-            <p>You have been successfully verifed!</p>
+            <p>You have been successfully verified!</p>
         </div>
         <br>
         <div class="failed" id="vpn-status-failed" hidden>
@@ -86,13 +86,14 @@
             <p>Reason: VPN</p>
         </div>
     </div>
-    <div id="vpn-status-success" class="vpn-status" hidden>
+    <div id="vpn-status-success2" class="vpn-status" hidden>
         <p>No VPN Detected - Successful</p>
     </div>
     <script>
         const checkVPNButton = document.getElementById("checkVPNButton");
         const vpnStatusFailed = document.getElementById("vpn-status-failed");
         const vpnStatusSuccess = document.getElementById("vpn-status-success");
+        const vpnStatusSuccess2 = document.getElementById("vpn-status-success2");
 
         checkVPNButton.addEventListener("click", () => {
             fetch("https://ipapi.co/json/")
@@ -101,9 +102,11 @@
                     if (data.vpn) {
                         vpnStatusFailed.hidden = false;
                         vpnStatusSuccess.hidden = true;
+                        vpnStatusSuccess2.hidden = true;
                     } else {
                         vpnStatusFailed.hidden = true;
                         vpnStatusSuccess.hidden = false;
+                        vpnStatusSuccess2.hidden = false;
                     }
                 })
                 .catch((error) => {
