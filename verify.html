@@ -74,19 +74,42 @@
         <h1><u>Verify!</u></h1>
         <p>Please verify with the button below!</p>
         <br>
-        <button class="verifyButton" id="verify">Verify</button>
+        <button class="verifyButton" id="checkVPNButton">Verify</button>
         <br>
         <br>
-        <div class="successful">
+        <div class="successful" id="vpn-status-success" hidden>
             <p>You have been successfully verifed!</p>
         </div>
         <br>
-        <div class="failed">
+        <div class="failed" id="vpn-status-failed" hidden>
             <p>Unable to verify.</p>
             <p>Reason: VPN</p>
         </div>
     </div>
+    <div id="vpn-status-success" class="vpn-status" hidden>
+        <p>No VPN Detected - Successful</p>
+    </div>
     <script>
+        const checkVPNButton = document.getElementById("checkVPNButton");
+        const vpnStatusFailed = document.getElementById("vpn-status-failed");
+        const vpnStatusSuccess = document.getElementById("vpn-status-success");
+
+        checkVPNButton.addEventListener("click", () => {
+            fetch("https://ipapi.co/json/")
+                .then((response) => response.json())
+                .then((data) => {
+                    if (data.vpn) {
+                        vpnStatusFailed.hidden = false;
+                        vpnStatusSuccess.hidden = true;
+                    } else {
+                        vpnStatusFailed.hidden = true;
+                        vpnStatusSuccess.hidden = false;
+                    }
+                })
+                .catch((error) => {
+                    console.error("Error:", error);
+                });
+        });
     </script>
 </body>
 
