@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <style>
         body {
             margin: 0;
@@ -44,11 +45,27 @@
         a:hover {
             color: #0056b3;
         }
+
+        .fadeInUp {
+            animation: fadeInUp 1s ease;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 
 <body>
-    <div class="container">
+    <div class="container animate__animated animate__fadeInUp">
         <h1>Welcome to Rewards and Verifier!</h1>
         <div class="backgroundCont">
             <h2>INFORMATION</h2>
