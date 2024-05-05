@@ -114,6 +114,42 @@
             transition: background-color 0.3s;
         }
         
+        .navbar {
+            background-color: #00b7ff;
+            border: #003cff solid 4px;
+            border-radius: 10px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            border-radius: 10px;
+            text-align: center;
+            padding: 24px 26px;
+            text-decoration: none;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            left: 50%;
+            transition: background-color 0.3s;
+        }
+        
+        .navbar a:hover {
+            background-color: #0099ff;
+            border-radius: 10px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: black;
+            left: 50%;
+            transition: background-color 0.3s;
+        }
+        
         @keyframes fadeInUp {
             0% {
                 opacity: 0;
@@ -128,6 +164,15 @@
 </head>
 
 <body>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="devs.html">Developers</a>
+        <a href="about.html">About</a>
+        <a href="https://discord.gg/ZbuNedvZPT">Contact</a>
+    </div>
+    <br>
+    <br>
+    <br>
     <div class="container animate__animated animate__fadeInUp">
         <h1><u><b>Welcome to Rewards and Verifier!</b></u></h1>
         <div class="containerContainer">
